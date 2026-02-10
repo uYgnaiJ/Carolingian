@@ -1,3 +1,5 @@
+package engine;
+
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
@@ -14,6 +16,8 @@ public class Engine {
     private final AtomicReference<Boolean> pause = new AtomicReference<>(true);
     private final AtomicBoolean flag = new AtomicBoolean(true);
     private final Map<LocalDate, List<Event>> eventMap = new ConcurrentHashMap<>();
+
+    private final LogicController logicController = LogicController.LOGIC_CONTROLLER;
 
     private Engine(){}
 
@@ -83,21 +87,55 @@ public class Engine {
                         System.out.println("Ends on " + date);
                     }
                     case "p" -> {
-                        System.out.println(date.get());
                         pause.set(!pause.get());
+                        if (pause.get().equals(true)){
+                            System.out.println("Time paused on " + date);
+                        }
+                        else{
+                            System.out.println("Time resumed ");
+                        }
                     }
-                    case "1" -> speed.set(0.5);
-                    case "2" -> speed.set(1.0);
-                    case "3" -> speed.set(2.0);
-                    case "4" -> speed.set(5.0);
-                    case "5" -> speed.set(1000.0);
+                    case "t" -> {
+                        System.out.println("Current date is " + date);
+                    }
+                    case "1" -> {
+                        speed.set(0.5);
+                        System.out.println("Speed on level 1");
+                    }
+                    case "2" -> {
+                        speed.set(1.0);
+                        System.out.println("Speed on level 2");
+                    }
+                    case "3" -> {
+                        speed.set(2.0);
+                        System.out.println("Speed on level 3");
+                    }
+                    case "4" -> {
+                        speed.set(5.0);
+                        System.out.println("Speed on level 4");
+                    }
+                    case "5" -> {
+                        speed.set(1000.0);
+                        System.out.println("Speed on max level");
+                    }
+                    default -> {
+                        System.out.println(
+                                """
+                                help        -> Get command helps
+                                q           -> Quit
+                                p           -> Pause time
+                                t           -> Display current date
+                                1/2/3/4/5   -> Speed gear"""
+                        );
+                    }
                 }
+                System.out.println("---------------------------------");
 
             }
 
         });
-
         System.out.println("Engine Started");
+        System.out.println("---------------------------------");
         ticker.get();
         input.get();
 

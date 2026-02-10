@@ -1,4 +1,5 @@
-import model.Character;
+package model;
+
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
@@ -51,5 +52,14 @@ public class Negotiation {
         TITLE,
         CASH,
         ;
+    }
+
+    public UUID getId(){return id;}
+
+    public Character getInitiator(){
+        return initiator;
+    }
+    public Character getReceiver(){
+        return receiver;
     }
 }
