@@ -1,4 +1,4 @@
-package engine;
+package omniaetern.carolingian.engine;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -18,6 +18,8 @@ public class Engine {
     private final Map<LocalDate, List<Event>> eventMap = new ConcurrentHashMap<>();
 
     private final LogicController logicController = LogicController.LOGIC_CONTROLLER;
+
+    public final LogicController debugController = logicController;
 
     private Engine(){}
 

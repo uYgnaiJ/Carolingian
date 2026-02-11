@@ -1,4 +1,4 @@
-package model.contract;
+package omniaetern.carolingian.model.contract;
 
 public class Feudal extends Contract{
     {

@@ -1,3 +1,5 @@
+package omniaetern.carolingian;
+
 import java.util.Arrays;
 
 public class ExceptionHandler {

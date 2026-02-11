@@ -1,9 +1,8 @@
-package model;
+package omniaetern.carolingian.model;
 
 import java.util.UUID;
 
-public class Family {
+public class Religion {
     private UUID id;
     private String name;
-    private Character leader;
 }

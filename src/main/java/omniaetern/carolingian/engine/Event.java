@@ -1,6 +1,6 @@
-package engine;
+package omniaetern.carolingian.engine;
 
-import model.Character;
+import omniaetern.carolingian.model.Character;
 
 import java.util.Map;
 

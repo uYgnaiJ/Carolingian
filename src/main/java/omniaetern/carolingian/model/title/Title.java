@@ -1,6 +1,6 @@
-package model.title;
+package omniaetern.carolingian.model.title;
 
-import model.contract.Contract;
+import omniaetern.carolingian.model.contract.Contract;
 
 import java.util.Map;
 import java.util.UUID;

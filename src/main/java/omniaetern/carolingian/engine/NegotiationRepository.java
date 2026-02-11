@@ -1,7 +1,7 @@
-package engine;
+package omniaetern.carolingian.engine;
 
-import model.Character;
-import model.Negotiation;
+import omniaetern.carolingian.model.Character;
+import omniaetern.carolingian.model.Negotiation;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
@@ -13,6 +13,8 @@ public class NegotiationRepository {
     private final ConcurrentMap<UUID, Negotiation> byId = new ConcurrentHashMap<>();
     private final ConcurrentMap<Character, Set<UUID>> byInitiator = new ConcurrentHashMap<>();
     private final ConcurrentMap<Character, Set<UUID>> byReceiver = new ConcurrentHashMap<>();
+
+    private NegotiationRepository(){}
 
     public Negotiation get(UUID id){
         return byId.get(id);

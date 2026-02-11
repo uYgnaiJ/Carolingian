@@ -1,7 +1,7 @@
-package model;
+package omniaetern.carolingian.model;
 
-import model.contract.Contract;
-import model.title.Title;
+import omniaetern.carolingian.model.contract.Contract;
+import omniaetern.carolingian.model.title.Title;
 
 import java.util.List;
 import java.util.Map;
@@ -9,7 +9,7 @@ import java.util.UUID;
 
 public class Character {
     private UUID id;
-    private boolean isPlayer;
+    private Boolean isPlayer;
 
     private String name;
     private Family family;
@@ -24,6 +24,20 @@ public class Character {
     private Map<Character, Contract> vassalCharacters;
     private Map<Family, Contract> vassalFamilies;
 
-    private int cash;
-    private int debt;
+    private Integer cash;
+    private Integer debt;
+
+    public Character(){}
+
+    public UUID getId(){
+        return id;
+    }
+
+    public List<Title> getTitles(){
+        return titles;
+    }
+
+    public List<Title> getClaims(){
+        return claims;
+    }
 }

@@ -1,12 +1,9 @@
-package model;
+package omniaetern.carolingian.model;
 
-import java.util.List;
 import java.util.UUID;
 
-public class Dynasty {
+public class Family {
     private UUID id;
     private String name;
     private Character leader;
-    private List<Family> families;
-
 }

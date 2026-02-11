@@ -1,7 +1,5 @@
-package engine;
+package omniaetern.carolingian.model;
 
-import model.Negotiation;
-import model.Character;
 import java.time.LocalDate;
 import java.util.UUID;
 

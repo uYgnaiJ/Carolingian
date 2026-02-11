@@ -1,0 +1,34 @@
+{
+  "Characters" : [
+    {
+      "id" : "1",
+      "isPlayer" : null,
+      "name" : "c1",
+      "family" : "f1",
+      "dynasty" : "d1",
+      "religion" : "r1",
+      "culture" : "cu1",
+      "titles" : ["t1"],
+      "claims" : ["cl1"],
+      "vassalCharacters" : null,
+      "vassalFamilies" : null,
+      "cash" : 100,
+      "debt" : 0
+    },
+    {
+      "id" : "2",
+      "isPlayer" : null,
+      "name" : "c2",
+      "family" : "f2",
+      "dynasty" : "d2",
+      "religion" : "r2",
+      "culture" : "cu2",
+      "titles" : ["t2"],
+      "claims" : ["cl2"],
+      "vassalCharacters" : null,
+      "vassalFamilies" : null,
+      "cash" : 1000,
+      "debt" : 0
+    }
+  ]
+}
